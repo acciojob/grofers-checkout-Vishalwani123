@@ -18,12 +18,12 @@ const getSum = () => {
   totalCell.setAttribute("colspan", "2");
   totalCell.style.fontWeight = "bold";
   totalCell.style.textAlign = "center";
-  totalCell.textContent = `Total Price: Rs ${total}`;
+	
+  totalCell.id = "ans";
+  totalCell.textContent = `${total}`;
 
   totalRow.appendChild(totalCell);
   table.appendChild(totalRow);
-
-  getSumBtn.disabled = true;
 };
 
 getSumBtn.addEventListener("click", getSum);
